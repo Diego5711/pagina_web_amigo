@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día del Amigo Secreto</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('C:/Users/andre/OneDrive/Escritorio/pagina_web_amigo/spid.webp') no-repeat center center fixed; /* Fondo local */
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: auto;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #FF6F61;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 1.1em;
+        }
+        button {
+            background: #FF6F61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background: #ff856e;
+            transform: scale(1.1);
+        }
+        .gift-list {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 1s forwards;
+        }
+        .gift-list li {
+            background: #FFEDD5;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transform: translateY(-10px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+        }
+        .gift-list li:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .gift-list li:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .gift-list li:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .gift-list img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <img src="C:/Users/andre/OneDrive/Escritorio/pagina_web_amigo/spid.webp" alt="SPID Logo" class="logo">
+    <div class="container">
+        <h1>🎄 feliz navidad a todos feliz navidad a todos 🎅</h1>
+        <p>Estos regalos me encantarian</p>
+        <button id="revealButton">Mostrar Sugerencias 🎁</button>
+        <ul class="gift-list" id="giftList">
+            <li><img src="https://i.imgur.com/YOURGIFT1.jpg" alt="Regalo 1">🎨 Pie de limon.</li>
+            <li><img src="https://i.imgur.com/YOURGIFT2.jpg" alt="Regalo 2">🌵 Skin en valorant.</li>
+            <li><img src="https://i.imgur.com/YOURGIFT3.jpg" alt="Regalo 3">🍫 Chocolates.</li>
+        </ul>
+        <h2>Gracias por la idea</h2>
+        <footer>
+            🎁 nada que hacer poh papito lindo 🎄 🎉
+        </footer>
+    </div>
+    <script>
+        const button = document.getElementById('revealButton');
+        const giftList = document.getElementById('giftList');
+
+        button.addEventListener('click', () => {
+            giftList.style.display = 'block';
+            button.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
